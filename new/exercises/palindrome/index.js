@@ -15,7 +15,22 @@ function palindrome(str) {
     //return str === reversed
 };
 
+// solution 2
+
+function palindromeTwo(str) {
+   // .every is going to check the boolean on every element in the array
+   // char represents the characters in the str and i represents the index of the array
+   return str.split('').every((char, i) => {
+    console.log(char, i)
+    // compares the current element to the last element in the array 
+        return console.log(char === str[str.length -i -1])
+   })
+};
+
+
 palindrome('abba');
 palindrome('abcdefg');
+palindromeTwo('hello');
+palindromeTwo('abba');
 
 module.exports = palindrome;
