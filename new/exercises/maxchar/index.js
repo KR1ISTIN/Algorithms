@@ -38,7 +38,8 @@ function maxChar(str) {
             maxChar = char;
         }
     }
-    return console.log(`max number of letter: ${max} / max letter: ${maxChar}`)
+    console.log(`max number of letter: ${max} / max letter: ${maxChar}`)
+    return maxChar;
 
 };
 maxChar('Hello World')
