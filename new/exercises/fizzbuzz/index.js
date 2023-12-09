@@ -13,7 +13,23 @@
 //   buzz
 
 function fizzBuzz(n) {
-    
+    for (let i = 1; i <= n; i++) {
+        console.log(i)
+        // check to see if n is a multi of 3 and 5?
+        if(i % 3 === 0 && i % 5 === 0) {
+            console.log('fizzbuzz');
+        } else if (i % 3 === 0) {
+            // is n multi of 3?
+            console.log('fizz');
+        } else if( i % 5 === 0) {
+            // is n multi of 5?
+            console.log('buzz')
+        } else {
+            console.log('else', i)
+        }
+    }
 }
+fizzBuzz(5);
+fizzBuzz(15);
 
 module.exports = fizzBuzz;
