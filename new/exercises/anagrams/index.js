@@ -36,7 +36,7 @@ function helperFunction(str) {
     
     // any char that is not a number, capital char or lowercase character then replace it with nothing
     for (let char of str.replace(/[^\w]/g, '').toLowerCase()) {
-        charMap[char] = charMap[char] + 1 || 1;
+        //charMap[char] = charMap[char] + 1 || 1;
         console.log(charMap[char], char);
     }
 
@@ -45,6 +45,29 @@ function helperFunction(str) {
 };
 
   //anagrams('rail safety', 'fairy tales'); //true
-  anagrams('RAIL! SAFETY!', 'fairy taless'); //false
+  //anagrams('RAIL! SAFETY!', 'fairy taless'); //false
   //anagrams('Hi there', 'Bye there'); // false
+
+
+
+function anagramsTwo (strA, strB) {
+    console.log('--------------------------- anagramsTwo-------------------')
+    const result = helperTwo(strA) === helperTwo(strB); // will compare the two strings together and return boolean
+    console.log('result', result);
+    return result;
+
+};
+
+function helperTwo(str) {
+    // going to return a new string with spaces, numbers, puncution, and set all to lowercase
+    // then split will create an array, sort is a array method which is place in alpha order or numaric order then join will return it to the a string
+    const result = str.replace(/[^\w]/g, '').toLowerCase().split('').sort().join('');
+    console.log(result, '--');
+    return result;
+}
+
+anagramsTwo('RAIL! SAFETY!', 'fairy taless');  // false
+//anagramsTwo('rail safety', 'fairy tales'); //true
+
+
 module.exports = anagrams;
