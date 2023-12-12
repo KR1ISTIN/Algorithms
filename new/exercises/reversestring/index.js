@@ -38,8 +38,8 @@ function reverseThree(str) {
         // still will cont reserve str, this is basically what is written on line 36
         //reversed += char
 
-         // solution to revere str
-         // taking we the first letter and adding to the the emptry string then 
+         // solution to reverse str
+         // taking the first letter and adding to the the emptry string then 
          // loops to the second letter and adds it
          // will loop through all characters until they have been added backwards
          reversed = char + reversed

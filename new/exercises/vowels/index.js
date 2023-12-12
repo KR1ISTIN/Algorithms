@@ -7,6 +7,22 @@
 //   vowels('Why do you ask?') --> 4
 //   vowels('Why?') --> 0
 
-function vowels(str) {}
+
+
+function vowels(str) {
+    let counter = 0;
+    const vowelChecker = ['a', 'e', 'i','o','u'];
+
+    for (let char of str.toLowerCase()) {
+        if(vowelChecker.includes(char)) {
+            counter++
+        }
+
+    }
+
+    return console.log(`there are ${counter} vowels in this string`);
+}
+
+vowels('Hi There!'); 
 
 module.exports = vowels;
