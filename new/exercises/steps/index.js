@@ -17,6 +17,8 @@
 //       '### '
 //       '####'
 
+
+
 // iterate 0 through n (make row)
 //make a empty str (stair)
 //from 0 to n (make column)
