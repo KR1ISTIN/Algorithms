@@ -9,7 +9,7 @@
     // check the base and if no work then return 
     // or do some work and call function again but make sure to modify the arg 
 
-    var factorial = function(num) {
+    const factorial = function(num) {
 
         //let result equal starting value of num
         let result = num; 
@@ -34,5 +34,21 @@
         return result;
     
     };
+
+    // solution two using recursion 
+    // NEED TO review deeper, has help with this one
+    const factorialTwo = function(num)  {
+        if (num < 0) 
+            return -1;
+        else if (num == 0) 
+            return 1;
+        else  {
+            console.log(num, 'NUM')
+            const total = (num * factorialTwo(num - 1))
+            console.log(total);
+        return total
+        }
+    }
     
     factorial(5);
+    factorialTwo(5)
