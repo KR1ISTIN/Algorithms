@@ -16,14 +16,16 @@ function vowels(str) {
     // will need to check in the string INCLUDES a vowel
     // if it does the count needs to be updated
     let counter = 0;
+    let allVowels = [];
     const vowelChecker = ['a', 'e', 'i','o','u'];
 
     for (let char of str.toLowerCase()) {
         if(vowelChecker.includes(char)) {
+            allVowels.push(char);
             counter++
         }
     }
-    return console.log(`there are ${counter} vowels in this string`);
+    return console.log(`there are ${counter} vowels in this string, all vowels that were used: ${allVowels.join(',')}`);
 };
 
 // solution two
@@ -37,7 +39,7 @@ function vowelTwo(str) {
     //console.log(matches);
 
     const totalVowels = matches ? matches.length : 0;
-    console.log(vowels);
+    console.log(totalVowels);
     return totalVowels;
 }
 
