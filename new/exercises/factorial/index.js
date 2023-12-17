@@ -26,9 +26,10 @@
         // 4rth loop: 2 > 1, num-- (1), 120 * 1, result: 120
         while (num > 1) {
             num--;
-            console.log(`num:${num}, result:${result}`);
-            result = result * num;
-            console.log(result, num, '------------');
+            //console.log(`num:${num}, result:${result}`);
+            // result = result * num
+            result *= num;
+            //console.log(result, num, '------------');
         }
         console.log(result, 'result');
         return result;
@@ -48,7 +49,24 @@
             console.log(total);
         return total
         }
+    };
+
+    // solution three with a for loop
+    const factorialThree = function(num) {
+        let result = 1; 
+
+        if( num === 0 || num === 1) {
+            return 1;
+        }
+
+        for (let i = num; i > 1; i--) {
+            result *= i;
+            console.log(result, i)  
+        }
+        console.log(result)
+        return result
     }
     
     factorial(5);
-    factorialTwo(5)
+    //factorialTwo(5);
+    factorialThree(5)
