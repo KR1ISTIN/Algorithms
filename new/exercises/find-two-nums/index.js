@@ -35,6 +35,7 @@ console.log(results);
 
 // this function finds the greates and least num in an array then find the difference 
 const largestAndLeast = function(arr) {
+    // setting to null just incase a negitive is used in the array
     let largest = null;
     let smallest = null;
 
