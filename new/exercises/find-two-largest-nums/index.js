@@ -22,7 +22,7 @@ const greaterNumbers = function(arr) {
             firstLargest = currentNum;
             
         }
-        console.log(secondLargest, firstLargest)
+        //console.log(secondLargest, firstLargest)
     }
 
     return firstLargest * secondLargest;
@@ -31,3 +31,31 @@ const greaterNumbers = function(arr) {
 
 const results = greaterNumbers([4, 8, 15, 16, 23, 42]);
 console.log(results);
+
+
+// this function finds the greates and least num in an array then find the difference 
+const largestAndLeast = function(arr) {
+    let largest = null;
+    let smallest = null;
+
+    for ( num of arr) {
+        const currentNum = num;
+        
+        if(largest === null || smallest === null) {
+            // initalizing them for the first value of the array, then we can compare
+            largest = currentNum;
+            smallest = currentNum;
+        } else if( currentNum > largest) {
+            largest = currentNum;
+        } else if ( currentNum < smallest) {
+            smallest = currentNum
+        }
+
+        console.log(largest, smallest)
+    }
+
+    return largest - smallest
+};
+
+const result2 = largestAndLeast([4, 8, 15, 2, 23, 42]);
+console.log(result2);
