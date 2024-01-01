@@ -10,7 +10,7 @@
 
 function reverseInt(n) {
     const reversed = n.toString().split('').reverse().join('');
-    //console.log(parseInt(reversed));
+    //console.log(parseInt(reversed), reversed);
 
     if (n < 0) {
         return console.log(n, parseInt(reversed) * -1) // will return the "negitive" sign

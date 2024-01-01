@@ -12,7 +12,7 @@ function capitalize(str) {
 
     // split will create a new array splitting each word at the space
     // loop through new array created by the split method 
-    for(let word of sliceStr.split(' ')) {
+    for(let word of str.split(' ')) {
         // take first letter from each vlaue and then join it with the rest of the word which we get from slice
         // slice(1) will slice everything AFTER (not before) index 1 only
         //console.log(word.slice(1)); 

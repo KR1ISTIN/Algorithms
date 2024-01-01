@@ -33,7 +33,7 @@ const results = greaterNumbers([4, 8, 15, 16, 23, 42]);
 console.log(results);
 
 
-// this function finds the greates and least num in an array then find the difference 
+// this function finds the greater and least num in an array then find the difference 
 const largestAndLeast = function(arr) {
     // setting to null just incase a negitive is used in the array
     let largest = null;

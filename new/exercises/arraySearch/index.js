@@ -27,3 +27,11 @@ const arraySearch2D = function(arr) {
 
 };
 arraySearch2D([1,2,3,['X','O'],4, ['X','X'],[['X','O']]]);
+
+// make a function that takes and array and a cb function as parameters to return a new array
+function myFunction(numArr, cb) {
+    const newArr = numArr.map(num => cb(num));
+    console.log(newArr);
+    return newArr;
+};
+myFunction([1,2,3], num => num * 2);
