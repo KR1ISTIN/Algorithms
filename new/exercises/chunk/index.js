@@ -89,7 +89,4 @@ function solution(str){
    solution("abcdefg");
 
 
-
-
-
 module.exports = chunk;
