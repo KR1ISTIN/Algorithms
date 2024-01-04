@@ -63,4 +63,33 @@ function chunkL(array, size) {
 chunkL(letters, 2);
 
 
+
+// chunking a str into an arr
+const chunkStr = function(str) {
+    const arr = [];
+    for( let i = 0; i <= str.length; i+=2) {
+        arr.push(str.slice(i, i + 2))
+      }
+
+      console.log(arr)
+   }
+
+function solution(str){
+    const isOddd = str.length % 2 !== 0;
+    console.log(isOddd)
+    
+     if(isOddd){
+       str += '_';
+       console.log(str)
+       chunkStr(str);
+     } else {
+        chunkStr(str);
+     }
+   }
+   solution("abcdefg");
+
+
+
+
+
 module.exports = chunk;
