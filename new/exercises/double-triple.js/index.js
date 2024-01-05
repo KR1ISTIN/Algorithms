@@ -20,3 +20,15 @@ const doubleTripleMap = function(arr) {
 };
 
 doubleTripleMap([1, 2, 3, 4]);
+
+// solution two
+function mapSolution (arr) {
+    // newArr will return a new arr based on condition 
+    const newArr = arr.map(num => {
+        const results = num % 2 === 0 ? num *= 2 : num *= 3
+        console.log(results, 'results')
+        return results;
+    });
+    return console.log(newArr);
+}
+mapSolution([1,2,3,5])
