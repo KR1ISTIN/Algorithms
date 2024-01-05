@@ -26,9 +26,9 @@ function mapSolution (arr) {
     // newArr will return a new arr based on condition 
     const newArr = arr.map(num => {
         const results = num % 2 === 0 ? num *= 2 : num *= 3
-        console.log(results, 'results')
+        console.log(results, 'results will print the new values but an actual array until its returned')
         return results;
     });
     return console.log(newArr);
 }
-mapSolution([1,2,3,5])
+mapSolution([1,2,3,5]);
