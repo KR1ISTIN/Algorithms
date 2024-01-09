@@ -36,3 +36,10 @@ foo2();
 console.log(a);
 
 // --------------IF YOU WANT TO MODIFY THE GLOBAL VARIABLE EXAMPLE BELOW---------------
+var z = 1;
+function foo3() {
+    z = 7; // Modifies the global variable x
+    return;
+}
+foo3();
+console.log(z);
