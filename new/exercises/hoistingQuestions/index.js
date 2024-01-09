@@ -17,3 +17,22 @@ function foo() {
 foo(); // now foo is called
 
 console.log(x); // will print 1 since we techincally have not modified the global scope var x
+
+
+// another example showing how function c is being reassigned due to hoisting
+var a = 1;
+
+function foo2() {
+    // function c gets hoisted here
+    c = 5; // modifying function c to a interger 5 instead of a function
+    console.log(c); // this is why it logs 5 
+    return;
+    function c(){
+        console.log('hello world!!',a)
+    }
+}
+
+foo2();
+console.log(a);
+
+// --------------IF YOU WANT TO MODIFY THE GLOBAL VARIABLE EXAMPLE BELOW---------------
