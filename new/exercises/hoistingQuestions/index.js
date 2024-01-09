@@ -43,3 +43,26 @@ function foo3() {
 }
 foo3();
 console.log(z);
+
+
+// ----------- Hoisting example 3
+var name = 'john joe';
+(function() {
+    console.log(name);
+    var name = 'peter piper';
+    //console.log(name); // if you try to log it now peter piper will print out since name has now been initialized 
+})();
+
+console.log(name); // john joe will be printed due to the global scope not being effected 
+
+// bc this invokes the function immedietly the global name 'john joe' gets hoisted to global as well as IIFE
+// then like 52 gets name gets declare to the top of the function but NOT initalized yet, therefore undefined will be printed
+
+
+// ----------TESTING INHERITANCE-------
+function Parent(){}; // CREATING A PARENT CLASS
+function Child(){}; // CREATING A CHILD CLASS
+Child.prototype = new Parent(); // BASICALLY LINKING THE CHILD PROTOYPE TO THE PARENT PROTOTYPE
+var obj = new Child(); // WHICH IS NOW CREATING A NEW INSTANCE OF THE CHILD WHICH IS LINKED TO THE PARENT AND HAS ACCESS TO METHODS OR PROPERTIES
+console.log(obj instanceof Parent); // EVALS TO TRUE SINCE THEY ARE LINKED
+console.log(Child.prototype); // parent class
