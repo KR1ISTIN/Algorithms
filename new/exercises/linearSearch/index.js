@@ -14,7 +14,7 @@ const linearSearch = (array, element) => {
   return -1;
 };
 
-console.log(linearSearch(arr, 77));
+console.log(linearSearch(arr, 7));
 
 // A different implementation of this function that will return an array of every index the searched element appears:
 const linearSearchMultipleElements = (array, element) => {
