@@ -13,16 +13,16 @@ function chunk(array, size) {
     const chunked = [];
 
     for (let el of array) {
-        const last = chunked[chunked.length -1]; // last element of the array
+        const last = chunked[chunked.length-1]; // last element of the array
         console.log(last, 'last')
 
         if(!last || last.length === size) {
             // adding a sub array is the length is equal to size
             console.log('if', el)
-            chunked.push([el]);
+            chunked.push([el]); // creating new sub array
           
         } else {
-            console.log('else', el)
+            console.log('else', el); // if the length of the arry in last it NOT === 2 then just add to the sub array
             last.push(el);
             
         }
@@ -68,6 +68,7 @@ chunkL(letters, 2);
 const chunkStr = function(str) {
     const arr = [];
     for( let i = 0; i <= str.length; i+=2) {
+        console.log(i)
         arr.push(str.slice(i, i + 2))
       }
 
@@ -75,11 +76,11 @@ const chunkStr = function(str) {
    }
 
 function solution(str){
-    const isOddd = str.length % 2 !== 0;
+    const isOddd = str.length % 2 !== 0; // is NOT equal to 0
     console.log(isOddd)
     
      if(isOddd){
-       str += '_';
+       str += '_'; // make str even
        console.log(str)
        chunkStr(str);
      } else {
@@ -89,4 +90,4 @@ function solution(str){
    solution("abcdefg");
 
 
-module.exports = chunk;
+//module.exports = chunk;

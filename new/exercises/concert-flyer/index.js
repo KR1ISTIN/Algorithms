@@ -34,12 +34,13 @@ const concertFlyer = function (magazine, flyer) {
     }
 
     for(let [word] of flyerMap) {
-        //console.log(word);
+        console.log(word);
         if(flyerMap.get(word) !== magazineMap.get(word)) {
             return false
         }
     }
    
+    console.log(flyerMap)
     return true
 };
 const str1 = 'Why are there so many songs about rainbows?';

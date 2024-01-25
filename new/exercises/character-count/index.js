@@ -6,12 +6,12 @@ function characterCount (str) {
   
 
     for(let i = 0; i <= lowerCase.length; i++) {
-        //console.log(lowerCase[i])
+        console.log(lowerCase[i])
         const character = lowerCase[i];
 
         if(character in countCharacters) {
-            //console.log(countCharacters[character], character)
             countCharacters[character]++
+            console.log(countCharacters[character], character)
         } else countCharacters[character] = 1
     }
 

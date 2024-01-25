@@ -36,7 +36,7 @@ function helperFunction(str) {
     
     // any char that is not a number, capital char or lowercase character then replace it with nothing
     for (let char of str.replace(/[^\w]/g, '').toLowerCase()) {
-        //charMap[char] = charMap[char] + 1 || 1;
+        charMap[char] = charMap[char] + 1 || 1;
         console.log(charMap[char], char);
     }
 
@@ -44,9 +44,9 @@ function helperFunction(str) {
     return charMap;
 };
 
-  //anagrams('rail safety', 'fairy tales'); //true
-  //anagrams('RAIL! SAFETY!', 'fairy taless'); //false
-  //anagrams('Hi there', 'Bye there'); // false
+  anagrams('rail safety', 'fairy tales'); //true
+  anagrams('RAIL! SAFETY!', 'fairy taless'); //false
+  anagrams('Hi there', 'Bye there'); // false
 
 
 

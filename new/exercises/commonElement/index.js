@@ -9,16 +9,17 @@ const commonElement = function(arrA, arrB) {
     // setting obj up and defining key value pairs
     for(let i = 0; i <= arrA.length; i++) {
         const num = arrA[i];
+        console.log(num)
         obj[num] = true;
-        console.log(obj);
+        //console.log(obj);
     };
 
     // looping through second arr
     for(let i = 0; i <=arrB.length; i++ ) {
-        const num = arrB[i];
+        const num = arrB[i]; // value in the array
         // checking to see if current num in the second array is set to true then return
         if(obj[num] === true) {
-            //console.log(num);
+            console.log(num);
             return num;
         }
     }

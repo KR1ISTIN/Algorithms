@@ -11,6 +11,7 @@ const arrayIntersection = function(arr1, arr2) {
     const arr2Map = new Map();
     const results = [];
 
+    // setting keys and values 
     for (let num of arr1) {
         if(!arr1Map.has(num)) {
             arr1Map.set(num, 1)
@@ -33,8 +34,9 @@ const arrayIntersection = function(arr1, arr2) {
 
     // eval for key and val equality 
     for(const [key,val] of arr1Map.entries()) {
+        console.log(key,val, '...........')
         for(const [k,v] of arr2Map.entries()) {
-            //console.log(k,v,'????', key, val)
+            console.log(k,v,'????', key, val)
             if(k === key && v === val) {
                 console.log(k,v);
                 //Array(v).fill(key) creates an array of length v where each element is set to the value key

@@ -37,12 +37,12 @@ function alphabetPosition(text) {
     //console.log(result)
     
     for ( let char of result) {
-      console.log(char);
+      //console.log(char);
        
       const x = char;
       
-      const num = obj[x];
-      //console.log(num);
+      const num = obj[x]; // accessing key to get value 
+      console.log(num);
        str += num + ' ' // update the str value with a space between numbers
     }
     
