@@ -9,8 +9,8 @@ function largestOfFour(arr) {
       let starting = arr[i][0];
       // need to now start at index one since we are comparing index 0 from the first loop
       for(let x = 1; x < arr[i].length; x++) {
-        console.log(arr[i][x]);
-        let curr = arr[i][x];
+        //console.log(arr[i][x]);
+        const curr = arr[i][x];
   
         if(starting < curr) {
           starting = curr
@@ -19,11 +19,11 @@ function largestOfFour(arr) {
         }
   
       }
-      console.log(starting, 'start')
+      console.log(starting, 'biggest num')
       newArr.push(starting)
     }
     console.log(newArr)
     return newArr;
   }
   
-  largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]);
+  largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1, 2000]]);
