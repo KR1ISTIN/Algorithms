@@ -1,6 +1,5 @@
 function confirmEnding(str, target) {
     const ending = target.length;
-    console.log(ending);
 
     if( ending === 1) {
       const split = str.split('').slice(- ending).join('');
@@ -23,3 +22,14 @@ function confirmEnding(str, target) {
 
 confirmEnding("Congratulation", "on");
 confirmEnding("Open sesame", "sage");
+
+// solution two 
+
+function confirmEnd2 (str, target) {
+    // str is a iterable so we technically dont need to force it to be an array
+    const result = str.slice(-target.length) === target;
+    console.log(result);
+
+    return result
+}
+confirmEnd2("Congratulation", "on");
