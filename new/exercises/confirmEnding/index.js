@@ -11,7 +11,6 @@ function confirmEnding(str, target) {
     } else if (ending > 1) {
       const split = str.split('').slice(- ending).join('');
      console.log(split, ':ending in str', ' the target:', target);
-     
       const result = split === target ? true : false;
       console.log(result);
 
