@@ -4,13 +4,13 @@
 function findElement(arr, func) {
     let num = 0;
   
-    const result = arr.find(func) 
-    console.log(result)
+    const result = arr.find(func);
+    console.log(result);
   
     const evalA = result ? num = result : undefined;
-    console.log(num)
+    console.log(num);
   
-    return evalA
-  }
+    return evalA;
+  };
   
   findElement([1, 2, 3, 4], num => num % 2 === 0);
