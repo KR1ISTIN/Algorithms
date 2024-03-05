@@ -49,4 +49,4 @@ function alphabetPosition(text) {
     return console.log(str)
   }
   
-  alphabetPosition("The sunset sets at twelve o' clock.")
+  alphabetPosition("The zunset sets at twelve o' clock.")

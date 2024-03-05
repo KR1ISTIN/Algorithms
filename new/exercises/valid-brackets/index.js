@@ -90,14 +90,14 @@ const validBracketsThree = function(str) {
 
     for(let char of str) {
         console.log('------char:', char)
-        if(bracketMap[char]) {
+        if(bracketMap[char]) { // checking to see if its in the map key and if true then push to array 
             console.log(bracketMap[char], '.....')
             arr.push(char);
             //console.log(arr);
         } else {
             let x = arr.pop();
             console.log(x, 'pop');
-            console.log(bracketMap[x], 'checking value in map')
+            console.log(bracketMap[x], 'checking value in map'); // results true if so 
 
             if(char !== bracketMap[x]) {
                 return false;
@@ -112,5 +112,5 @@ const ex = "{[()]}";
 const ex2 = "{{{]";
 
 console.log(validBracketsThree(ex)); // Output: true
-console.log(validBracketsThree(ex2)); // Output: false
+//console.log(validBracketsThree(ex2)); // Output: false
 
